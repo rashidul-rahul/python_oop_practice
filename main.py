@@ -1,9 +1,7 @@
-class Item:
-    test_attr = 100
-
-    def __init__(self):
-        pass
+from phone import Phone
 
 
-item1 = Item()
-print(Item.test_attr)
+phone1 = Phone("Nokia", 400, 5, 1)
+phone2 = Phone("Iphone", 600, 6, 1)
+
+print(phone1.calculate_price())
