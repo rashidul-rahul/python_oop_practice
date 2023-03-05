@@ -1,7 +1,7 @@
-from phone import Phone
+from item import Item
 
+item1 = Item("Book", 20, 3)
 
-phone1 = Phone("Nokia", 400, 5, 1)
-phone2 = Phone("Iphone", 600, 6, 1)
+item1.name = "name"
 
-print(phone1.calculate_price())
+print(item1.name)

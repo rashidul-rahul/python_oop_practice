@@ -5,11 +5,19 @@ class Item:
     all = []
 
     def __init__(self, name, amount, quantity):
-        self.name = name
+        self.__name = name
         self.amount = amount
         self.quantity = quantity
 
         self.all.append(self)
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        self.__name = value
 
     def calculate_price(self):
         return self.amount * self. quantity
@@ -32,4 +40,3 @@ class Item:
 
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name}', {self.amount}, {self.quantity})"
-
