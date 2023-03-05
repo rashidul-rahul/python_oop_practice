@@ -35,6 +35,18 @@ class Item:
                         quantity=item["amount"]
                         )
 
+    #  private methods
+    def __connect_smtp(self, smtp):
+        pass
+
+    # private methods
+    def __prepare_message(self):
+        return f"This is a prepare_message for {self.name}"
+
+    def send_email(self):
+        self.__connect_smtp("smtp")
+        print(self.__prepare_message())
+
     def __str__(self):
         return self.name
 
